@@ -294,10 +294,48 @@
     </div>
     <!--/ Abstract. -->
 
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method: Pushing and Grasping (PaG)</h2>
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/fig2.png"
+               class="interpolation-image"
+               alt="Interpolate start reference image."/>
+          <p>Start Frame</p>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Grasping an object when it is in an ungraspable
+            pose is a challenging task, such as books or other large flat
+            objects placed horizontally on a table. Inspired by human
+            manipulation, we address this problem by pushing the object
+            to the edge of the table and then grasping it from the hanging
+            part. In this paper, we develop a model-free Deep Reinforcement
+            Learning framework to synergize pushing and grasping actions.
+            We first pre-train a Variational Autoencoder to extract high dimensional features of input scenario images. One Proximal
+            Policy Optimization algorithm with the common reward and
+            sharing layers of Actor-Critic is employed to learn both pushing
+            and grasping actions with high data efficiency. Experiments
+            show that our one network policy can converge 2.5 times
+            faster than the policy using two parallel networks. Moreover,
+            the experiments on unseen objects show that our policy can
+            generalize to the challenging case of objects with curved
+            surfaces and off-center irregularly shaped objects. Lastly, our
+            policy can be transferred to a real robot without fine-tuning
+            by using CycleGAN for domain adaption and outperforms the
+            push-to-wall baseline.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method -->
+
+
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Summary Video</h2>
         <div class="publication-video">
           <iframe src="./static/videos/ICRA23_0725.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
