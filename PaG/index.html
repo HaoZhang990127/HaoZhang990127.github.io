@@ -354,10 +354,10 @@ transfers the images from the real domain to the simulation domain, effectively 
     
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-4">Test on object with bevels:</h2>
+      <!-- Test on object with bevels. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Tests on objects with bevels:</h2>
           <p>
             The trained model is tested on curved objects with random values of 165 mm to 260 mm of inner tangent circle diameter, 50 mm height, 30◦ chamfer, and randomly generated colors.
           </p>
@@ -375,7 +375,32 @@ transfers the images from the real domain to the simulation domain, effectively 
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ Test on object with bevels. -->
+
+      <!-- Test on object with bevels. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-4">Tests on letter objects:</h2>
+          <p>
+            The trained model is tested on curved objects with random values of 165 mm to 260 mm of inner tangent circle diameter, 50 mm height, 30◦ chamfer, and randomly generated colors.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bevels/circle.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bevels/Notch.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/bevels/square.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Test on object with bevels. -->
+
+
 
       <!-- Matting. -->
       <!-- <div class="column">
