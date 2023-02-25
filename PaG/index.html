@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -56,7 +56,7 @@
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
+      </a> -->
 
       <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -77,10 +77,10 @@
           </a>
         </div>
       </div> -->
-    </div>
+    <!-- </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -260,31 +260,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Grasping an object when it is in an ungraspable
+            pose is a challenging task, such as books or other large flat
+            objects placed horizontally on a table. Inspired by human
+            manipulation, we address this problem by pushing the object
+            to the edge of the table and then grasping it from the hanging
+            part. In this paper, we develop a model-free Deep Reinforcement
+            Learning framework to synergize pushing and grasping actions.
+            We first pre-train a Variational Autoencoder to extract high dimensional features of input scenario images. One Proximal
+            Policy Optimization algorithm with the common reward and
+            sharing layers of Actor-Critic is employed to learn both pushing
+            and grasping actions with high data efficiency. Experiments
+            show that our one network policy can converge 2.5 times
+            faster than the policy using two parallel networks. Moreover,
+            the experiments on unseen objects show that our policy can
+            generalize to the challenging case of objects with curved
+            surfaces and off-center irregularly shaped objects. Lastly, our
+            policy can be transferred to a real robot without fine-tuning
+            by using CycleGAN for domain adaption and outperforms the
+            push-to-wall baseline.
           </p>
         </div>
       </div>
@@ -296,7 +290,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="./static/videos/ICRA23_0725.mp4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -320,7 +314,7 @@
             would be impossible without nerfies since it would require going through a wall.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
+            <source src="./static/videos/ICRA23_0725.mp4"
                     type="video/mp4">
           </video>
         </div>
