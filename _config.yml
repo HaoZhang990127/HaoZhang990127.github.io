@@ -18,12 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Keunhong Park
-name: Keunhong Park
-position: Research Scientist 
-email: t4a0itmqm@mozmail.com
+title: Hao Zhang
+name: Hao Zhang
+position: master's student from [Tsinghua](https://www.tsinghua.edu.cn/en/)-[RWTH Aachen](https://www.rwth-aachen.de/go/id/a/?lidx=1) Double Master's Degree Program 
+email: zhanghao_990127@163.com
 description: >-
-  I am a research scientist at [Google](https://ai.google/research/), where I work on photorealistic 3D reconstruction at internet scale.
+  I am a master's student from [Tsinghua](https://www.tsinghua.edu.cn/en/)-[RWTH Aachen](https://www.rwth-aachen.de/go/id/a/?lidx=1) Double Master's Degree Program. 
+  My research interests lie at computer vision and robotics.
+  Currently, I am working on application of generative models on face reconstruction.
+  
+  I am a research assistant at [Google](https://ai.google/research/), where I work on photorealistic 3D reconstruction at internet scale.
 
 
   Previously, I was a Ph. D student at the [University of Washington](https://grail.cs.washington.edu/) advised by
