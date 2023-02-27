@@ -1,10 +1,7 @@
-- id: hypernerf
-  title: "HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields"
-  venue: SIGGRAPH Asia, 2021
-  description: "By applying ideas from level set methods, we can represent topologically changing scenes with NeRFs."
-  project_page: "https://hypernerf.github.io"
-  github: google/hypernerf
-  arxiv: 2106.13228
+- id: PaG
+  title: "Reinforcement Learning Based Pushing and Grasping Objects from Ungraspable Poses"
+  venue: International Conference on Robotics and Automation(ICRA), 2023
+  project_page: "https://haozhang990127.github.io/PaG/"
   image: hypernerf_before.jpg
   image_mouseover: hypernerf_after.mp4
   authors:
