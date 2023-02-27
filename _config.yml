@@ -31,11 +31,11 @@ description: >-
   Before that I am a visiting researcher with [Dr. Hongzhuo Liang](https://tams.informatik.uni-hamburg.de/people/liang/) and [Prof. Jianwei Zhang](https://tams.informatik.uni-hamburg.de/people/zhang/) at [TAMS, University of Hamburg](https://tams.informatik.uni-hamburg.de/)
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: KeunhongP
-github_username: keunhong
-google_scholar: HVZb-5oAAAAJ
-google_analytics: G-MFWSBLRKG0
+# url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: KeunhongP
+github_username: HaoZhang990127
+google_scholar: Hao Zhang
+# google_analytics: G-MFWSBLRKG0
 
 # Build settings
 theme: minima
