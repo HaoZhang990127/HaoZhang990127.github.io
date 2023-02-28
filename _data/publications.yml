@@ -1,6 +1,7 @@
 - id: PaG
   title: "Reinforcement Learning Based Pushing and Grasping Objects from Ungraspable Poses"
   venue: International Conference on Robotics and Automation(ICRA), 2023
+  venue_abb: ICRA 2023
   project_page: "https://haozhang990127.github.io/PaG/"
   arxiv: 2302.13328
   image: PaG.jpg
