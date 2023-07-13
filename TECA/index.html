@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reinforcement Learning Based Pushing and Grasping Objects from Ungraspable Poses</title>
+   
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a> -->
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> -->
+    <!-- </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <font size="6.8">
+              <p>
+                Reinforcement Learning Based Pushing and Grasping
+              </p> 
+              <p>
+                Objects from Ungraspable Poses
+              </p>
+            </font>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://haozhang990127.github.io/">Hao Zhang</a><sup>1,2,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://tams.informatik.uni-hamburg.de/people/liang/">Hongzhuo Liang</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://tams.informatik.uni-hamburg.de/people/cong/">Lin Cong</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://lyujz.github.io/">Jianzhi Lyu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.sigs.tsinghua.edu.cn/cl_en/main.htm">Long Zeng*</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.me.tsinghua.edu.cn/en/info/1083/1249.htm">Pingfa Feng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://tams.informatik.uni-hamburg.de/people/zhang/">Jianwei Zhang</a><sup>3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>RWTH Aachen University,</span>
+            <span class="author-block"><sup>3</sup>Universität Hamburg,</span>
+            <span class="author-block"><sup>*</sup>Corresponding author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <!-- href="https://arxiv.org/abs/2011.12948" -->
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2302.13328"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/sitnIslp8vo"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code Coming Soon</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Grasping an object when it is in an ungraspable
+            pose is a challenging task, such as books or other large flat
+            objects placed horizontally on a table. Inspired by human
+            manipulation, we address this problem by pushing the object
+            to the edge of the table and then grasping it from the hanging
+            part. In this paper, we develop a model-free Deep Reinforcement
+            Learning framework to synergize pushing and grasping actions.
+            We first pre-train a Variational Autoencoder to extract high dimensional features of input scenario images. One Proximal
+            Policy Optimization algorithm with the common reward and
+            sharing layers of Actor-Critic is employed to learn both pushing
+            and grasping actions with high data efficiency. Experiments
+            show that our one network policy can converge 2.5 times
+            faster than the policy using two parallel networks. Moreover,
+            the experiments on unseen objects show that our policy can
+            generalize to the challenging case of objects with curved
+            surfaces and off-center irregularly shaped objects. Lastly, our
+            policy can be transferred to a real robot without fine-tuning
+            by using CycleGAN for domain adaption and outperforms the
+            push-to-wall baseline.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method: Pushing and Grasping (PaG)</h2>
+        <div>
+          <!-- <img src="./static/images/fig2.png"
+               class="interpolation-image"
+               alt="Interpolate start reference image."
+               weidth: 400px
+               height: auto/> -->
+          <p style="text-align: center;">
+            <img src="./static/images/fig2.2_00.png" alt="">
+          </p>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            We pre-train a VAE for feature extraction and a CycleGAN for domain adaption. We train our policy in Isaac Gym
+simulator, and the pre-trained encoder obtains a latent vector concatenated with the gripper pose as a state embedded into the policy network (shared layers
+of Actor-Critic) to determine the following action (144 steps for push and 84 steps for grasp). For the real robot experiment, the pre-trained CycleGAN
+transfers the images from the real domain to the simulation domain, effectively tricking the policy to believe that it is still in the simulator.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method -->
+
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Summary Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/sitnIslp8vo"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hao2023PaG,
+  author    = {Zhang, Hao and Liang, Hongzhuo and Cong, Lin and Lyu, Jianzhi and Zeng, Long and Feng, Pingfa and Zhang, Jianwei},
+  title     = {Reinforcement Learning Based Pushing and Grasping Objects from Ungraspable Poses},
+  journal   = {ICRA},
+  year      = {2023},
+}</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-8">
+        <div class="content">
+          <h6 class="title is-6">
+            Source code mainly borrowed from 
+            <a rel="license" href="https://github.com/keunhong">Keunhong Park</a>'s
+            <a rel="license" href="https://nerfies.github.io/">Nerfies website</a>.
+          </h6>
+          <h6 class="title is-6">
+            Please contact <a
+              href="https://haozhang990127.github.io/">Hao Zhang</a> for feedback and questions.
+          </h6>
+
+          <!-- <p>
+            Source code mainly borrowed from 
+            <a rel="license" href="https://github.com/keunhong">Keunhong Park</a>'s
+            <a rel="license" href="https://nerfies.github.io/">Nerfies website</a>.
+          </p> -->
+          <!-- <p>
+            Please contact <a
+              href="https://ps.is.mpg.de/person/hzhang">Hao Zhang</a> for feedback and questions.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
