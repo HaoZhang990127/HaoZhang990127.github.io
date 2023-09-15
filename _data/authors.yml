@@ -5,7 +5,7 @@ Hao Zhang:
   is_me: true
 Hao Zhang*:
   first_name: Hao
-  last_name: Zhang
+  last_name: Zhang*
   website: https://haozhang990127.github.io/
   is_me: true
 Hongzhuo Liang:
@@ -34,7 +34,7 @@ Jianwei Zhang:
   website: https://tams.informatik.uni-hamburg.de/people/zhang/
 Yao Feng*:
   first_name: Yao
-  last_name: Feng
+  last_name: Feng*
   website: https://scholar.google.com/citations?user=wNQQhSIAAAAJ&hl=en&oi=ao
 Peter Kulits:
   first_name: Peter
