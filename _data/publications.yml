@@ -15,6 +15,21 @@
     - Pingfa Feng
     - Jianwei Zhang
 
+- id: TECA
+  title: "TECA: Text-Guided Generation and Editing of Compositional 3D Avatars"
+  venue: arXiv 2023
+  venue_abb: arXiv 2023
+  project_page: "https://yfeng95.github.io/teca/"
+  arxiv: 2309.07125
+  image: TECA.png
+  image_mouseover: TECA.mp4
+  authors:
+    - Hao Zhang*
+    - Yao Feng*
+    - Peter Kulits
+    - Yandong Wen
+    - Justus Thies
+    - Michael J. Black
 
 # - id: fignerf
 #   title: "FiG-NeRF: Figure Ground Neural Radiance Fields for 3D Object Category Modelling "

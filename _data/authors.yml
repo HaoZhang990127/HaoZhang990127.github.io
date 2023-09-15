@@ -3,6 +3,11 @@ Hao Zhang:
   last_name: Zhang
   website: https://haozhang990127.github.io/
   is_me: true
+Hao Zhang*:
+  first_name: Hao
+  last_name: Zhang
+  website: https://haozhang990127.github.io/
+  is_me: true
 Hongzhuo Liang:
   first_name: Hongzhuo
   last_name: Liang
@@ -27,3 +32,23 @@ Jianwei Zhang:
   first_name: Jianwei
   last_name: Zhang
   website: https://tams.informatik.uni-hamburg.de/people/zhang/
+Yao Feng*:
+  first_name: Yao
+  last_name: Feng
+  website: https://scholar.google.com/citations?user=wNQQhSIAAAAJ&hl=en&oi=ao
+Peter Kulits:
+  first_name: Peter
+  last_name: Kulits
+  website: https://kulits.github.io/
+Yandong Wen:
+  first_name: Yandong
+  last_name: Wen
+  website: https://is.mpg.de/person/ydwen
+Justus Thies:
+  first_name: Justus
+  last_name: Thies
+  website: https://justusthies.github.io/
+Michael J. Black:
+  first_name: Michael
+  last_name: Black
+  website: https://ps.is.mpg.de/person/black
